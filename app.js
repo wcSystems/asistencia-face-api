@@ -21,6 +21,7 @@ app.use(cors({origin: "*"}));
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.use(express.static('public'));
 
 // SUBIR IMAGENES CON MULTER
 app.use('/uploads', express.static(path.join(__dirname,'uploads')));
