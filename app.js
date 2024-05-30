@@ -9,14 +9,14 @@ const fs = require('fs').promises;
 
 const app = express();
 
-// app.use(cors({origin: "*"}));
-app.use(cors({
+app.use(cors({origin: "*"}));
+/* app.use(cors({
     origin: ['*'],
     "methods": "GET,PUT,POST",
     "preflightContinue": false,
     "optionsSuccessStatus": 204,
     credentials: true
-}));
+})); */
 
 app.use(express.json());
 app.use(morgan('dev'));
